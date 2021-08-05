@@ -20,3 +20,11 @@ print('Is 415-555-4242 a phone number?')
 print(isPhoneNumber('415-555-4242'))
 print('Is Moshi moshi a phone number?')
 print(isPhoneNumber('Moshi moshi'))
+
+
+import re
+phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)')
+mo = phoneNumRegex.search('phone number 444-444-3333')
+print('phone number ' + mo.group())
+
+print(mo.group(0))
